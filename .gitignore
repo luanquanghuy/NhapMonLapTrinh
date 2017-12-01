@@ -2,9 +2,11 @@
 ### C ###
 # Prerequisites
 *.d
-*bai*
-!*.cpp
-!*.c
+*
+!*.*
+##*bai*
+##!*.cpp
+##!*.c
 
 # Object files
 *.o
