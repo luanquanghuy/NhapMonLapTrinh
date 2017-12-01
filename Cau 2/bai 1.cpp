@@ -1,13 +1,9 @@
 #include <stdio.h>
+#include <string.h>
 // ham tra ve do dai cua xau
-int strLen(char* s){
-    int n = 0;
-    while(s[++n]!=NULL);
-    return n;
-}
 char* xoaSpace2Ben(char* s){
     int i, nSpaceL=0, nSpaceR=0;
-    int n = strLen(s);
+    int n = strlen(s);
     // do dai khoang trang ben trai
     for(int i=0; i<n; i++){
         if(s[i]==' ') nSpaceL++;
