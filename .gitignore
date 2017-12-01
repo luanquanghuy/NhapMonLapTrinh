@@ -4,6 +4,7 @@
 *.d
 *bai*
 !*.cpp
+!*.c
 
 # Object files
 *.o
