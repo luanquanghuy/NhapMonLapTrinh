@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+
 int main(){
     char s[100], ch;
     int n, dem=0, i;
