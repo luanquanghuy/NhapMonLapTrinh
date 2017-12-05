@@ -1,8 +1,10 @@
 #include <stdio.h>
 void nhapMang(int a[], int &n){
     int i;
-    printf("Nhap n: ");
-    scanf("%d", &n);
+    do{
+        printf("Nhap n: ");
+        scanf("%d", &n);
+    }while(n<=1 || n>=100);
     for(i=0; i<n; i++){
         printf("Nhap a[%d]: ", i);
         scanf("%d", &a[i]);
