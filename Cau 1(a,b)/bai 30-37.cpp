@@ -16,19 +16,19 @@ int isAllNguyenTo(int a[], int n){
     }
     return 1;
 }
-// bai 32
+// bai 32 cach 1
 int timSoDuongMin(int a[], int n){
     int i, soDuongMin=0;
-    for(i=0; i<n; i++)
+    for(i=0; i<n; i++){
         if(a[i]>0){
-            soDuongMin = a[i];
-            break;
+            if(soDuongMin==0 || a[i]<soDuongMin) soDuongMin = a[i];
         }
-    for(i=0; i<n; i++)
-        if(a[i]>0 && a[i]<soDuongMin) soDuongMin = a[i];
+    }
     return soDuongMin;
 }
-// bai 33
+// bai 32 cach 2 giong cach 2 bai 33
+// bai 33 cach 1 giong bai 32 cach 1
+// bai 33 cach 2:
 int timSoDuongMax(int a[], int n){
     int i, soAmMax=0;
     for(i=0; i<n; i++)

@@ -79,6 +79,22 @@ void bai26(int a[], int &n){
 }
 
 int bai27(int a[], int n){
+    int maxChan=1, result = 0;
+    printf("%d", maxChan);
+    for(int i=0; i<n; i++){
+        if(a[i]%2==0){
+            if(maxChan==1 || a[i]>maxChan) maxChan = a[i];
+        }
+    }
+    for(int i=0; i<n; i++){
+        if(a[i]>maxChan || maxChan == 1){
+            if(result == 0 || a[i]<result) result = a[i];
+        }
+    }
+    return result;
+}
+/* Cach 2
+int bai27(int a[], int n){
     int i, chanMax, leMin=0;
     // gan gia tri so chanMax = 1 so chan dau tien
     for(i=0; i<n; i++)
@@ -100,7 +116,22 @@ int bai27(int a[], int n){
     //
     return leMin;
 }
-
+*/
+int bai28(int a[], int n){
+    int minLe=0, maxChan=1;
+    for(int i=0; i<n; i++){
+        if(a[i]%2!=0){
+            if(minLe==0 || a[i]<minLe) minLe = a[i];
+        }
+    }
+    for(int i=0; i<n; i++){
+        if(a[i]<minLe || minLe == 0){
+            if(maxChan==1 || a[i]>maxChan) maxChan = a[i];
+        }
+    }
+    return maxChan;
+}
+/*
 int bai28(int a[], int n){
     int i, leMin, chanMax=1;
     for(i=0; i<n; i++)
@@ -119,6 +150,7 @@ int bai28(int a[], int n){
         if(a[i]>chanMax && a[i]<leMin) chanMax = a[i];
     return chanMax;
 }
+*/
 
 int bai29(int a[], int n){
     int arr[n],nArr =0, dem[n], i, j, newV, maxDem;
@@ -141,7 +173,7 @@ int bai29(int a[], int n){
 }
 
 int main(){
-	int a[100] = {13, -4, 10, -4, 11, -3, 7, -3, 0, -4}, n=10;
-	printf("So le nho nhat ma lon hon moi so chan la %d", bai29(a, n));
+	int a[100] = {-13, -1, -10, -4, -11, -3, -7, 3, 1, -2}, n=10;
+	printf("So le nho nhat ma lon hon moi so chan la %d", bai27(a, n));
 	return 0;
 }
