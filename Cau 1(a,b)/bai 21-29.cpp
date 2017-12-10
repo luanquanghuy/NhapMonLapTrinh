@@ -69,13 +69,14 @@ void bai26(int a[], int &n){
     int i, j, x;
     printf("Nhap x: ");
     scanf("%d", &x);
-    for(i=0; i<n; i++)
-        if(a[i]>x){
+    for(i=0; i<=n; i++){
+        if(a[i]>x || i==n){
             for(j=n-1; j>=i; j++) a[j+1]=a[j];
             a[i] = x;
-            n++;
             break;
         }
+    }
+    n++;
 }
 
 int bai27(int a[], int n){
